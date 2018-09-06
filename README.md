@@ -1,6 +1,6 @@
-# xuanyuanjian
+# 网易轩辕剑手游官网
 
-> fake
+> 基于Vue.js 仿网易轩辕剑手游官网
 
 ## Build Setup
 

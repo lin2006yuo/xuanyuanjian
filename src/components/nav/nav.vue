@@ -7,7 +7,9 @@
                 <a href="#">安卓充值</a>
             </div>
             <div class="topBar-right">
-                <a href="#">领取网易严选宝箱</a>
+                <transition name="fade">
+                    <a href="#" v-show="isfadeUp2">领取网易严选宝箱</a>
+                </transition>
             </div>
             <div class="topBar-menu" @mouseover="mouseoverHandle" @mouseout="mouseoutHandle">
                 <span :class="{hover: ishover}">网易游戏全目录
@@ -227,9 +229,10 @@
 export default {
     data() {
         return {
-            ishover: true,
+            ishover: false,
             isshowMore: false,
-            isShowMoreMobi: false
+            isShowMoreMobi: false,
+            isfadeUp2: true,
         }
     },
     computed: {
@@ -238,7 +241,15 @@ export default {
         },
         Mtext(){
             return this.isShowMoreMobi ? '<<' : '更多热门手游'
-        }
+        },
+    },
+    mounted(){
+        setInterval(function () {
+            this.isfadeUp2 = !this.isfadeUp2
+            setTimeout(() => {
+                this.isfadeUp2 = !this.isfadeUp2
+            }, 550);   
+        }.bind(this),5000)
     },
     methods: {
         mouseoverHandle(){
@@ -292,18 +303,34 @@ export default {
             position absolute
             right 0
             top 0
+            .fade-enter-active, .fade-leave-active
+                transition: all ease-in-out .5s;            
+            .fade-enter
+                opacity 0
+                transform: translate3d(0,70%,0);
+            .fade-leave-to
+                opacity 0
+                transform: translate3d(0,-70%,0);
             a
                 color: #333!important;
                 width: 100%;
                 text-align: center;
                 display: inline-block;
                 float: left;
-                line-height: 52px;
+                line-height: 52px;       
                 &:hover
                     color: #bc2e2e!important;
                     border-bottom: 3px solid #bc2e2e;
                     background-color: #F3F3F3;
                     background-image: -webkit-linear-gradient(top,#F3F3F3 0,#FEFEFE 52px);
+                // &.fadeUp2
+                //     opacity: 1;
+                //     transform: translate3d(0,0,0);
+                //     transition: all ease-in-out .5s;
+                // &.fadeUp
+                //     opacity: 0
+                //     transform: translate3d(0,-70%,0);
+                //     transition: all ease-in-out .5s;                    
         .topBar-menu
             width 100%
             position absolute
@@ -340,6 +367,9 @@ export default {
                         display: inline-block;
             .table.hover
                 display block
+                height 490px
+                opacity 0.9
+                transition all .2s ease-out
             .table
                 position absolute
                 top 55px
@@ -347,7 +377,11 @@ export default {
                 background: #fdfefe;
                 border-top: 1px solid #ececec;
                 width 100%
-                display none
+                z-index: 9999
+                height 55px
+                transition all .2s ease-out
+                overflow: hidden
+                opacity 0
                 &.moreAni
                     .nav
                         .mobi

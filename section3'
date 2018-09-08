@@ -1,0 +1,22 @@
+[master 4441e1a] 'banner-
+ 22 files changed, 576 insertions(+), 43 deletions(-)
+ create mode 100644 src/pages/banner/components/imgs/bg3.jpg
+ create mode 100644 src/pages/banner/components/imgs/bg4.jpg
+ create mode 100644 src/pages/banner/components/imgs/btn-code-1_faa2531.png
+ create mode 100644 src/pages/banner/components/imgs/btn-code-2_24fb5ab.png
+ create mode 100644 src/pages/banner/components/imgs/btn-code_3c0bf97.png
+ create mode 100644 src/pages/banner/components/imgs/page2-icon-1_5b56d85.png
+ create mode 100644 src/pages/banner/components/imgs/page2-icon-2_247943d.png
+ create mode 100644 src/pages/banner/components/imgs/page2-pic1-bp1_4488c92.png
+ create mode 100644 src/pages/banner/components/imgs/page2-pic1-bp2_70c4f8f.png
+ create mode 100644 src/pages/banner/components/imgs/page2-pic1-peo3_0ed688e.png
+ create mode 100644 src/pages/banner/components/imgs/page2-pic5-peo_62e4d22.png
+ create mode 100644 src/pages/banner/components/imgs/page2-picBg-on_2690230.png
+ create mode 100644 src/pages/banner/components/imgs/page2-picBg_a1e2964.png
+ create mode 100644 src/pages/banner/components/imgs/page3-gift1_ffcdc5c.png
+ create mode 100644 src/pages/banner/components/imgs/page3-gift2_43f2567.png
+ create mode 100644 src/pages/banner/components/imgs/page3-giftBg_5d976e7.png
+ create mode 100644 src/pages/banner/components/imgs/page4-pic1-on_09f7fb3.jpg
+ create mode 100644 src/pages/banner/components/next.vue
+ create mode 100644 src/pages/banner/components/section3.vue
+ create mode 100644 src/pages/banner/components/section4.vue

@@ -275,6 +275,8 @@ export default {
     height 55px
     width 100%
     background-color #fbfbfb
+    position relative
+    z-index 9999
     .topBar-main
         width 1260px
         position relative
@@ -378,7 +380,7 @@ export default {
                 border-top: 1px solid #ececec;
                 width 100%
                 z-index: 9999
-                height 55px
+                height 0px
                 transition all .2s ease-out
                 overflow: hidden
                 opacity 0

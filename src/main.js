@@ -5,7 +5,13 @@ import App from './App'
 import router from './router'
 import 'assets/css/reset.styl'
 
+//swiper
+import 'swiper/dist/css/swiper.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+
 Vue.config.productionTip = false
+
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({
@@ -14,3 +20,4 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+

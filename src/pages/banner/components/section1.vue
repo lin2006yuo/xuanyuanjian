@@ -9,7 +9,7 @@
             <span class="hero6"></span>
         </div>
         <a href="javascript:;" class="logo"></a>
-        <a href="#" class="gw"></a>
+        <router-link to="index" class="gw"></router-link>
         <span class="slogan" @click="showHeroToggle"></span>
         <a href="#" class="order btnOrder"></a>
         <!-- <div class="order btnDownload"></div> -->

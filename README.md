@@ -1,21 +1,18 @@
-# 网易轩辕剑手游官网
+## 仿轩辕剑龙舞云山手游官网  
 
-> 基于Vue.js 仿网易轩辕剑手游官网
 
-## Build Setup
+> [在线](https://xuanyuanjian.vercel.app/#/)
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+[水墨效果](https://xuanyuanjian.vercel.app/#/demo)  
+实现：CSS属性`mask`设置图片，图片为连续的帧，再用动画滚动图片位置，重点是连续帧图的制作
+``` css
+/* 核心代码 */
+animation: masky 1.2s steps(39) forwards
+@keyframes masky
+    0%
+        -webkit-mask-position: 0 0;
+    100%
+        -webkit-mask-position: 100% 0;
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+

@@ -83,8 +83,8 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
-        // -webkit-mask: url(img/mask_caffc4a.png) center center no-repeat;
-        -webkit-mask: url(img/masaike.png) center center no-repeat;
+        -webkit-mask: url(img/mask_caffc4a.png) center center no-repeat;
+        // -webkit-mask: url(img/masaike.png) center center no-repeat;
         -webkit-mask-size: 4000% 100%;
         will-change: transform;
         &.show
